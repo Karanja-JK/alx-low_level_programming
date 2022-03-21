@@ -3,19 +3,21 @@
 /**
  * task 4
  */
-void print_rev(char *s)
+void print_rev(char *str)
 {
-	int fcounter = 0;
-	int i, n;
+	int i = 0;
+	int total_characters = 0;
+	int c =0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (str[i] != 0)
 	{
-		fcounter++;
+		i++;
 	}
+	total_characters = i - 1;
 
-	for (n = (fcounter - 1); n >= 0; n--)
+	for (c = 0; c <= total_characters; c++)
 	{
-		_putchar(s[n]);
+		_putchar(str[total_characters - c]);
 	}
 	_putchar('\n');
 }
