@@ -19,5 +19,5 @@ void print_rev(char *str)
 	{
 		putchar(str[total_characters - c]);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
