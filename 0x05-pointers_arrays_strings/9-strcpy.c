@@ -1,4 +1,4 @@
-# include <stdio>
+# include <stdio.h>
 
 /**
  * _strcpy - copies strings pointed to by
