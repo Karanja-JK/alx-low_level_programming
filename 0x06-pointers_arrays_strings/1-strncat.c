@@ -1,33 +1,31 @@
 # include <stdio.h>
 
 /**
- * _strcat-concatenates two strings
- * @dest-pointer to a character will be changed
- * @src-pointer to a character that will also be changed
- * Return-dest
+ * _strncat-concatenates two strings
+ * @dest-destination value
+ * @src-source value
+ * @n-limit of the concatenation
+ *
+ * return-pointer to resulting dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i, j;
+	int dlen = 0, j = 0;
 
-	i = 0;
-
-	while (dest[i] != '\0')
+	while (dest[dlen])
 	{
-		i++;
+		dlen++;
 	}
-
-	j = 0;
-
-	while (src[j] != '\0')
+	
+	while (j < n && src[j])
 	{
-		dest[i] = src[j];
+		dest[dlen] = src[j];
+		dlen++;
 		j++;
-		i++;
 	}
 
-	dest[i] = '\0';
+	dest[dlen + n + 1] = '\0';
 
 	return (dest);
 }
